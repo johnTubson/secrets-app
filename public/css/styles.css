@@ -1,0 +1,45 @@
+
+body {
+  background-color: #E8ECEF;
+  padding-bottom: 20px;
+}
+
+.centered {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+.error {
+  color: darkred;
+  font-weight: bold;
+}
+
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar-brand span {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.container-fluid {
+  padding: 1% 8%;
+}
+
+.icon-width {
+  font-size: larger;
+}
+

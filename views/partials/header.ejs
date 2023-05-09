@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Secrets</title>
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-light navbar-expand-sm">
+    <div class = "container-fluid">
+      <a class="navbar-brand" href="<%= loggedIn ? "/secrets" : "/" %>"><i class="fas fa-key fa-1x me-2 icon-width"></i><span>SECRETS</span></a>
+      <ul class = "navbar-nav ms-auto">
+        <% if (loggedIn) { %>
+          <li class="nav-item">
+            <form action = "/logout" method = "post" class = "inlineForm">
+              <button class="btn btn-md" type = "submit" role="button"><span>Log Out</span></button>
+            </form>
+          </li>
+        <% } %>
+        <% if(!loggedIn) { %>
+              <li class="nav-item">
+                  <a href = "/register"><button class="btn btn-light btn-sm" type="submit" role="button"><span>Register</span></button></a>                
+              </li>
+              <li class="nav-item">
+                <a href = "/login"><button class="btn btn-dark btn-sm ms-3" type="submit" role="button"><span>Log In</span></button></a>                
+              </li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+
+  
