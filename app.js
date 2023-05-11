@@ -66,7 +66,7 @@ passport.deserializeUser(User.deserializeUser());
 
 dbConnection()
 .then( () => {
-  return app.listen(port, () => console.log("Server running on port 3000."));
+  return app.listen(port, () => console.log(`Server successfully running on ${port}`));
 })
 .catch(err => { 
   //close the express application
