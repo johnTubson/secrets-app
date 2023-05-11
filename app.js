@@ -88,7 +88,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(function(req, res, next) {
   const userSession = req.isAuthenticated();
   app.locals.loggedIn = userSession ? true : false;
-  app.locals.err = null;
+  app.locals.errors = null;
   app.locals.authenticationErrors = [];
   next();
 }); 
