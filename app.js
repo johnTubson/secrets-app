@@ -20,6 +20,7 @@ const _ = require("lodash");
 const User = require("./models/users"); // require the mongoose model
 const routes = require("./routes/routes");
 const dbConnection = require("./db-connection");
+const port = process.env.PORT || 3000;
 
 /**
  * Dependencies settings
@@ -65,7 +66,7 @@ passport.deserializeUser(User.deserializeUser());
 
 dbConnection()
 .then( () => {
-  return app.listen(3000, () => console.log("Server running on port 3000."));
+  return app.listen(port, () => console.log("Server running on port 3000."));
 })
 .catch(err => { 
   //close the express application
