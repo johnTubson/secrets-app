@@ -19,6 +19,7 @@
     "color-name": "^1.1.4",
     "concat-map": "^0.0.1",
     "connect-ensure-login": "^0.1.1",
+    "connect-mongo": "^5.0.0",
     "content-disposition": "^0.5.4",
     "content-type": "^1.0.5",
     "cookie": "^0.5.0",

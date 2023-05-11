@@ -6,7 +6,8 @@ const mongoose = require("mongoose");
 
 const connection = async function connection () {
     try {
-       return await mongoose.connect(process.env.MONGODB_URI);
+        const mongoInstance = await mongoose.connect(process.env.MONGODB_URI);
+        return mongoInstance;
     } catch (error) {
         console.log("Check for database server status. Err details: \n" + error);
     }
